@@ -16,11 +16,11 @@ It contains the basic framework code for a JUCE plugin editor.
 //==============================================================================
 /**
 */
-class FinalProjectAudioProcessorEditor : public AudioProcessorEditor, public Slider::Listener
+class Lab7AudioProcessorEditor : public AudioProcessorEditor, public Slider::Listener
 {
 public:
-	FinalProjectAudioProcessorEditor(FinalProjectAudioProcessor&);
-	~FinalProjectAudioProcessorEditor();
+	Lab7AudioProcessorEditor(Lab7AudioProcessor&);
+	~Lab7AudioProcessorEditor();
 
 	//==============================================================================
 	void paint(Graphics&) override;
@@ -30,10 +30,9 @@ public:
 private:
 	// This reference is provided as a quick way for your editor to
 	// access the processor object that created it.
-	FinalProjectAudioProcessor & processor;
-	Slider upperBound;
-	Slider lowerBound;
-	Slider distortArg;
+	Lab7AudioProcessor & processor;
+	Slider delay;
+	Slider gain;
 
-	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(FinalProjectAudioProcessorEditor)
+	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(Lab7AudioProcessorEditor)
 };

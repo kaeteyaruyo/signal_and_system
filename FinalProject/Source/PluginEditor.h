@@ -12,6 +12,7 @@ It contains the basic framework code for a JUCE plugin editor.
 
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "PluginProcessor.h"
+#include <cmath>
 
 //==============================================================================
 /**
@@ -31,9 +32,8 @@ private:
 	// This reference is provided as a quick way for your editor to
 	// access the processor object that created it.
 	FinalProjectAudioProcessor & processor;
-	Slider upperBound;
-	Slider lowerBound;
-	Slider distortArg;
+	Slider bands[6];
+	Label bandLabels[6];
 
 	JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(FinalProjectAudioProcessorEditor)
 };
